@@ -200,11 +200,11 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     padding: 140px 0 80px;
     /* background: var(--profile, linear-gradient(0deg, rgba(243, 231, 233, 0.40) 0%, rgba(227, 238, 255, 0.40) 99%, rgba(227, 238, 255, 0.40) 100%)); */
-    background-image: url(../portfolio-main/images/me.png);
+    background-image: url(./images/me.png);
     background-repeat: no-repeat;
     background-color: #e9eaea;
-    background-position-x: 810px;
-    background-position-y: 47px;
+    background-position-x: 700px;
+    background-position-y: 71px;
     background-size: 40%;
     position: relative;
     overflow: hidden;
@@ -413,7 +413,7 @@ h1, h2, h3, h4, h5, h6 {
 .fbtn {
     background-color: #ff6b6b;
     color: white;
-/*     border: 1px solid #ff6b6b;*/    
+    border: none;
     padding: 8px 24px; /* 버튼 안쪽 여백 */
     margin-left: 15px; /* 버튼 사이의 간격 */
     border-radius: 25px;
@@ -526,8 +526,8 @@ body.modal-open {
 .creative-header h2 {
     font-size: 2rem;
     color: #2c3e50;
-    padding-bottom: 50px;
-}
+/*     padding-bottom: 50px;
+ */}
 .creative-solutions {
     padding: 50px 0;
     background: #fff;
@@ -542,10 +542,12 @@ body.modal-open {
     margin-bottom: 50px;
 }
 
+.solutions-left{
+    margin-left: 80px;
+}
+
 .solution-image {
-    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .solution-image img {
@@ -561,6 +563,10 @@ body.modal-open {
     letter-spacing: 2px;
     margin-bottom: 20px;
     text-transform: uppercase;
+} 
+
+.solutions-right{
+    margin-left: 80px;
 }
 
 .solutions-right h2 {
@@ -572,17 +578,28 @@ body.modal-open {
 
 .grid_2x2 {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 260px);
     font-size: 18px;
     color: #2c3e50;
     line-height: 1.6;
-    margin-bottom: 40px;
-    
+    margin-bottom: 20px;
 }
+
+.grid_2x2 > div:nth-child(5){
+    grid-column: span 2;
+}
+
+.grid_2x2 >div{
+    padding-bottom: 20px;
+}
+
 .grid_2x2  h3{
     color: #ff6b6b;
+    
+}
 
+.grid_2x2 span >h3{
+    color: #ff6b6b;
 }
 .grid_2x2 p{
     color: #2c3e50;
