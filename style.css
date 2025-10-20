@@ -432,9 +432,21 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
+    /* Make all items the same aspect ratio */
+    aspect-ratio: 16 / 9;
+    /* Fallback for browsers that don't support aspect-ratio */
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+    position: relative;
 }
-img {
+
+.grid .item img {
     width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover; /* fill the box without distortion */
 }
 
 body {
@@ -536,14 +548,50 @@ body.modal-open {
 
 .solutions-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     align-items: center;
     gap: 80px;
     margin-bottom: 50px;
 }
 
-.solutions-left{
-    margin-left: 80px;
+.solutions-left {
+	width: 548px;
+	height: 315px;
+	position: relative;
+	overflow: hidden;
+    border-radius: 20px;
+}
+
+.solutions-left img {
+    width: 548px;
+	height: 315px;
+	transition: all 0.5s;
+    background: linear-gradient(rgba(77, 79, 82, 0.8), rgba(21, 23, 26, 0.8));
+}
+
+.solution-caption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	transition: 0.5s;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.solutions-left:hover .solution-caption {
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.solutions-left:hover img {
+	transform: scale(1.3);
 }
 
 .solution-image {
@@ -551,8 +599,8 @@ body.modal-open {
 }
 
 .solution-image img {
-    width: 100%;
-    height: auto;
+    width: 600px;
+    height: 100%;
     display: block;
 }
 
@@ -566,7 +614,7 @@ body.modal-open {
 } 
 
 .solutions-right{
-    margin-left: 80px;
+    margin-left: 120px;
 }
 
 .solutions-right h2 {
@@ -607,24 +655,28 @@ body.modal-open {
 
 .creative_btn{
     display: flex;
-    justify-content: flex-start;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 
 }
 .btn-explore {
-    color: #333;
+    color: white;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 1px;
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 
 .btn-explore:hover {
     color: #ff6b6b;
+    transition: transform 0.5s ease;
+    transform: scale(1.2);
+
 }
 
 .arrow {
@@ -748,89 +800,6 @@ body.modal-open {
     line-height: 1.6;
 }
 
-.services-detail-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-}
-
-.service-detail-card {
-    text-align: center;
-    padding: 40px 20px;
-    border-radius: 15px;
-    background: #fff;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.service-detail-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.service-detail-card.exclusive {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-}
-
-.service-detail-card.exclusive .service-detail-icon svg {
-    stroke: white;
-    fill: rgba(255, 255, 255, 0.2);
-}
-
-.service-detail-card.exclusive h3,
-.service-detail-card.exclusive p {
-    color: white;
-}
-
-.service-detail-card.exclusive .learn-more {
-    color: white;
-}
-
-.exclusive-badge,
-.thumbs-badge {
-    position: absolute;
-    top: -10px;
-    right: 20px;
-    background: #ff6b6b;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 15px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.thumbs-badge {
-    background: #4ecdc4;
-}
-
-.service-detail-icon {
-    margin-bottom: 30px;
-}
-
-.service-detail-card h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #2c3e50;
-}
-
-.service-detail-card p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-.learn-more {
-    color: #333;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-.learn-more:hover {
-    color: #ff6b6b;
-}
 
 
 
@@ -860,30 +829,6 @@ body.modal-open {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-link {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.social-link:hover {
-    background: #ff6b6b;
-    transform: translateY(-2px);
 }
 
 .footer-links {
@@ -923,8 +868,8 @@ body.modal-open {
 @media (max-width: 1024px) {
 
     .hero-content,
-    .solutions-content,
-    .testimonials-content {
+    .solutions-content
+    {
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
@@ -946,17 +891,6 @@ body.modal-open {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .clients-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
     .cta-content {
         grid-template-columns: 1fr;
@@ -985,14 +919,9 @@ body.modal-open {
 
     .services-grid,
     .case-grid,
-    .services-detail-grid,
-    .team-grid,
-    .stats-grid {
+    .services-detail-grid
+    {
         grid-template-columns: 1fr;
-    }
-
-    .clients-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 
     .section-header {
@@ -1010,20 +939,6 @@ body.modal-open {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .newsletter-form {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .newsletter-form input {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .newsletter-links {
-        flex-direction: column;
-        gap: 20px;
-    }
 
     .slide-content {
         grid-template-columns: 1fr;
@@ -1059,14 +974,6 @@ body.modal-open {
 
     .footer-links {
         grid-template-columns: 1fr;
-    }
-
-    .stat-number {
-        font-size: 36px;
-    }
-
-    .testimonials blockquote {
-        font-size: 20px;
     }
 
     .cta-left h2 {
@@ -1130,6 +1037,5 @@ html {
 
 /* Cache control for images */
 img {
-    max-width: 100%;
     height: auto;
 }
