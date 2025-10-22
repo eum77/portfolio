@@ -23,6 +23,10 @@ h6 {
     line-height: 1.2;
 }
 
+span,p{
+    font-family: 'nexon-lv1-gothic-low-otf', 'GmarketSans', sans-serif;
+
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -205,48 +209,63 @@ h6 {
 .testimonials {
     padding: 100px 0;
     position: relative;
-    margin: 80px;
+    margin: 40px 0;
+}
+
+.t-container{
+    margin: 0 ;
+    padding: 10px;
+
 }
 
 .testimonials-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 80px;
+    gap: 40px;
     margin-bottom: 40px;
 }
 
 .testimonial-image {
     position: relative;
-    width: 318px;
-    height: 318px;
+    width: 70%;
+    height: auto;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0 104px;
 }
 
 
 .testimonials blockquote {
-    font-size: 12px;
+    font-size: 1rem;
     line-height: 1.4;
-    color: #4DB6AC;
-    margin-bottom: 40px;
+    color: #FF6F61;
+    margin-bottom: 10px;
     font-style: italic;
 }
 
 .testimonial-subtitle {
     color: #2c3e50;
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 30px;
-    text-transform: uppercase;
 }
 
 .testimonial-profile{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
+ .testimonal-card span{
+    color: #666666;
+    font-size: 18px;
+ }
 
+ .testimonal-card testimonal-card-txt{
+    color: #2c3e50;
+    font-size: 16px;
+
+ }
 
 
 /* Hero Section */
@@ -651,7 +670,8 @@ body.modal-open {
 
 .grid_2x2 h3 {
     color: #ff6b6b;
-
+    font-weight: 500;
+    margin-bottom: 8px;
 }
 
 .grid_2x2 span>h3 {
