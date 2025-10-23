@@ -14,8 +14,6 @@
 </head>
 
 <body>
-
-
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
@@ -68,46 +66,50 @@
                     <span class="hero-description df column"> <span>'웃음의 타이밍을 아는'</span><span>영상 디자이너 음나령 입니다. </span>
                     </span>
                     <div class="hero-buttons">
-                        <a class="btn btn-primary" target="_blank" href=https://drive.google.com/file/d/1S11lfR5CVIYZ1l1umkYg4nHMz2ei0YaL/view?uspdrive_link>이력서
+                        <a class="btn btn-primary" target="_blank"
+                            href=https://drive.google.com/file/d/1S11lfR5CVIYZ1l1umkYg4nHMz2ei0YaL/view?uspdrive_link>이력서
                             보기</a>
-                        <a class="btn btn-secondary" target="_blank" href="https://github.com/eum77?tab=repositories">깃허브 가기</a>
+                        <a class="btn btn-secondary" target="_blank"
+                            href="https://github.com/eum77?tab=repositories">깃허브 가기</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Services Section : profile -->
-    <section class="services">
-        <div class="container">
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <rect x="10" y="15" width="40" height="30" rx="3" fill="none" stroke="#ff6b6b" stroke-width="2" />
-                            <circle cx="30" cy="30" r="8" fill="#ff6b6b" opacity="0.2" />
-                        </svg>
-                    </div>
-                    <h3>인적사항</h3>
-                    <p> 이름: 음나령 <br> 생년월일: 2003.11.09 <br> 주소: 안양시 동안구 <br> 전화번호: 010-3825-6167 <br> 이메일:
-                        boohitnyang@gmail.com </p>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="t-container">
+            <div class="testimonials-content">
+                <div class="testimonial-image">
+                    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+                        type="module"></script>
+                    <dotlottie-wc src="https://lottie.host/3c3d4ad4-2d6f-4d95-a3fb-dab1a4e9fcaa/PpwrrFvnTT.lottie"
+                        autoplay loop class="testimonial-image"></dotlottie-wc>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <path d="M30 10 L45 25 L30 40 L15 25 Z" fill="none" stroke="#4ecdc4" stroke-width="2" />
-                            <circle cx="30" cy="25" r="5" fill="#4ecdc4" opacity="0.2" />
-                        </svg>
-                    </div>
-                    <h3>학력사항</h3>
-                    <p> 2025.04 ~ <br> 생성형 AI를 활용한 반응형 웹콘텐츠<br> (영상제작&코딩) 개발기획자 양성과정 <br> 2022.02 ~ <br> 호서대학교
-                        미디어커뮤니케이션학과 재학 </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <polygon points="30,10 40,20 50,15 45,35 15,35 10,15 20,20" fill="none" stroke="#45b7d1" stroke-width="2" />
-                            <circle cx="30" cy="25" r="3" fill="#45b7d1" />
-                        </svg>
+                <div class="testimonial-text">
+                    <blockquote> "There is no paradise where you run away." </blockquote>
+                    <p class="testimonial-subtitle">PROFILE</p>
+                    <div class="testimonial-profile">
+                        <div class="testimonal-card">
+                            <span testimonal-card-title>Name</span>
+                            <div class="testimonal-card-txt">음나령</div>
+                        </div>
+                        <div class="testimonal-card">
+                            <span testimonal-card-title>Birth</span>
+                            <div class="testimonal-card-txt">2003. 11 .09</div>
+                        </div>
+                        <div class="testimonal-card">
+                            <span testimonal-card-title>Address</span>
+                            <div class="testimonal-card-txt">안양시 동안구</div>
+                        </div>
+                        <div class="testimonal-card">
+                            <span testimonal-card-title>E-mail</span>
+                            <div class="testimonal-card-txt">eumnaryeong@naver.com</div>
+                        </div>
+                        <div class="testimonal-card">
+                            <span testimonal-card-title>Phone</span>
+                            <div class="testimonal-card-txt">010-3825-6167</div>
+                        </div>
                     </div>
                     <h3>경력사항</h3>
                     <p> 2024.07 <br> 자동차 운전면허 자격증 </p>
@@ -117,10 +119,10 @@
     </section>
     <!-- portfolio : video -->
     <section id="portfolio" class="portfolio">
-        <div class="container">
+        <div class="port-container">
             <div class="port-menu">
                 <div class="port-header">
-                    <h2>VIDEO</h2>
+                    <h2><span class="logo-dot"></span> MEDIA</h2>
                 </div>
                 <div class="filter">
                     <button class="fbtn" data-btn="all">ALL</button>
@@ -129,46 +131,25 @@
                 </div>
             </div>
             <div class="grid">
-                <div class="item" data-item="pro" data-url="./mo.html">
+                <div class="item" data-item="pro" data-url="./hoseo.html">
                     <img src="./images/sddefault.webp" alt="university">
                 </div>
                 <div class="item" data-item="pro" data-url="./mo.html">
                     <img src="./images/original.png" alt="original">
                 </div>
-                <div class="item" data-item="pro" data-url="./mo.html">
+                <div class="item" data-item="pro" data-url="./lag.html">
                     <img src="./images/liveandgrow.png" alt="corporate">
                 </div>
-                <div class="item" data-item="pro" data-url="./mo.html">
+                <div class="item" data-item="pro" data-url="./mb.html">
                     <img src="./images/morebomb.jpg" alt="morebomb">
                 </div>
-                <div class="item" data-item="drama" data-url="./mo.html">
+                <div class="item" data-item="drama" data-url="./zico.html">
                     <img src="./images/ziaco.png" alt="ziaco">
                 </div>
-                <div class="item" data-item="drama" data-url="./mo.html">
+                <div class="item" data-item="drama" data-url="./bottle.html">
                     <img src="./images/bottle.png" alt="bottle">
                 </div>
             </div>
-            <!--             <div class="grid">
-                <div class="item" data-item="pro" data-url="./mo.html">
-                    <img src="./images/sddefault.webp" alt="university">
-                </div>
-                <div class="item" data-item="pro" data-url="./mo.html">
-                    <img src="./images/original.png" alt="original">
-                </div>
-                <div class="item" data-item="pro" data-url="./mo.html">
-                    <img src="./images/liveandgrow.png" alt="corporate">
-                </div>
-                <div class="item" data-item="pro" data-url="./mo.html">
-                    <img src="./images/morebomb.jpg" alt="morebomb">
-                </div>
-                <div class="item" data-item="drama" data-url="./mo.html">
-                    <img src="./images/ziaco.png" alt="ziaco">
-                </div>
-                <div class="item" data-item="drama" data-url="./mo.html">
-                    <img src="./images/bottle.png" alt="bottle">
-                </div>
-            </div>
- -->
         </div>
     </section>
     <!-- Modal -->
@@ -180,12 +161,15 @@
             </div>
         </div>
     </div>
+
     <!-- Creative Solutions Section : morebomb> -->
+    <div class="creative-header container">
+        <span class="logo-dot"></span>
+        <h2>UX/UI</h2>
+    </div>
     <section class="creative-solutions">
         <div class="container">
-            <div class="creative-header">
-                <h2>01</h2>
-            </div>
+            <h3 class="solution-num">01</h3>
             <div class="solutions-content">
                 <div class="solutions-left">
                     <img src="./images/mmbb.png" alt="morebomb">
@@ -193,9 +177,10 @@
                         <div class="creative_btn">
                             <a href="https://github.com/eum77/morebomb-frontend" target="_blank" class="btn-explore">GIT
                                 가기 <span class="arrow">→</span></a>
-                            <a href="https://frontend-omega-self.vercel.app/" target="_blank" class="btn-explore">사이트
+                            <a href="https://frontend-omega-self.vercel.app/" target="_blank" class="btn-explore">웹사이트
                                 가기<span class="arrow">→</span></a>
-                            <a href="https://drive.google.com/file/d/12v6OIeeRwmhrYMaJRL67LKEiLih3a60C/view?usp=drive_link" target="_blank" class="btn-explore">기획서 보기<span class="arrow">→</span></a>
+                            <a href="https://drive.google.com/file/d/12v6OIeeRwmhrYMaJRL67LKEiLih3a60C/view?usp=drive_link"
+                                target="_blank" class="btn-explore">기획서 보기<span class="arrow">→</span></a>
                         </div>
                     </div>
                 </div>
@@ -228,22 +213,21 @@
             </div>
         </div>
     </section>
+
     <!-- Creative Solutions Section : ongreut -->
     <section class="creative-solutions">
         <div class="container">
-            <div class="creative-header">
-                <h2>02</h2>
-            </div>
+            <h3 class="solution-num">02</h3>
             <div class="solutions-content">
                 <div class="solutions-left">
-                    <img src="./images/mmbb.png" alt="morebomb">
+                    <img src="./images/ooo.png" alt="ongreut">
                     <div class="solution-caption">
                         <div class="creative_btn">
-                            <a href="https://github.com/eum77/morebomb-frontend" target="_blank" class="btn-explore">GIT
-                                가기 <span class="arrow">→</span></a>
-                            <a href="https://frontend-omega-self.vercel.app/" target="_blank" class="btn-explore">사이트
-                                가기<span class="arrow">→</span></a>
-                            <a href="https://drive.google.com/file/d/12v6OIeeRwmhrYMaJRL67LKEiLih3a60C/view?usp=drive_link" target="_blank" class="btn-explore">기획서 보기<span class="arrow">→</span></a>
+                            <a href="https://www.figma.com/proto/Xt8cpoFjGavGE1QPbhS7ph/%EC%98%A8%EA%B7%B8%EB%A6%87%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8--%EB%B3%B5%EC%82%AC-?page-id=66%3A52&node-id=108-16629&viewport=403%2C441%2C0.26&t=3qVoON2biBwj1Enl-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=66%3A377"
+                                target="_blank" class="btn-explore">프로토타입 보기
+                                <span class="arrow">→</span></a>
+                            <a href="https://drive.google.com/file/d/1QN8FrCshuKoS-9Xu_3aSE2CIzqY6u6tI/view?usp=sharing"
+                                target="_blank" class="btn-explore">기획서 보기<span class="arrow">→</span></a>
                         </div>
                     </div>
                 </div>
@@ -276,22 +260,23 @@
             </div>
         </div>
     </section>
+
     <!-- Creative Solutions Section : cgv-->
     <section class="creative-solutions">
         <div class="container">
-            <div class="creative-header">
-                <h2>03</h2>
-            </div>
+            <h3 class="solution-num">03</h3>
             <div class="solutions-content">
                 <div class="solutions-left">
                     <img src="./images/mmbb.png" alt="morebomb">
                     <div class="solution-caption">
                         <div class="creative_btn">
-                            <a href="https://github.com/eum77/morebomb-frontend" target="_blank" class="btn-explore">GIT
+                            <a href="https://www.figma.com/proto/ugHSVJoloFJlggt3zrnZzi/CGV-Website?page-id=0%3A1&node-id=1-81&p=f&viewport=186%2C121%2C0.43&t=pkv1zNGslCLXqi1b-1&scaling=scale-down&content-scaling=fixed" target="_blank"
+                                class="btn-explore">웹사이트
                                 가기 <span class="arrow">→</span></a>
-                            <a href="https://frontend-omega-self.vercel.app/" target="_blank" class="btn-explore">사이트
+                            <a href="https://www.figma.com/proto/1MkClKvmSdVxctWcqBEo2v/UXUI%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?page-id=0%3A1&node-id=108-2457&viewport=210%2C-45%2C0.21&t=lGrrnxmIaJuNFv1T-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=108%3A2457&show-proto-sidebar=1" target="_blank" class="btn-explore">모바일
                                 가기<span class="arrow">→</span></a>
-                            <a href="https://drive.google.com/file/d/12v6OIeeRwmhrYMaJRL67LKEiLih3a60C/view?usp=drive_link" target="_blank" class="btn-explore">기획서 보기<span class="arrow">→</span></a>
+                            <a href="https://drive.google.com/file/d/1IJE2TP2Jxzo4OmZWAaDiqIbyuGHJXDTs/view?usp=sharing"
+                                target="_blank" class="btn-explore">기획서 보기<span class="arrow">→</span></a>
                         </div>
                     </div>
                 </div>
@@ -324,56 +309,6 @@
             </div>
         </div>
     </section>
-    <!-- Case Studies Section -->
-    <section class="case-studies">
-        <div class="container">
-            <div class="case-header">
-                <h2>DESIGN</h2>
-            </div>
-            <div class="case-grid">
-                <div class="case-item">
-                    <div class="case-image">
-                        <img src="https://digitalpro.liquid-themes.com/wp-content/uploads/2020/01/fancy1@2x-1.jpg" alt="Nexa Mobile">
-                    </div>
-                    <div class="case-info">
-                        <h3>Cafe In</h3>
-                        <p>Banner Design</p>
-                    </div>
-                </div>
-                <div class="case-item">
-                    <div class="case-image">
-                        <img src="https://digitalpro.liquid-themes.com/wp-content/uploads/2020/01/fancy5@2x-1.jpg" alt="Aliens do 3D Automobile">
-                    </div>
-                    <div class="case-info">
-                        <h3>Aliens do 3D Automobile</h3>
-                        <p>Ecommerce</p>
-                    </div>
-                </div>
-                <div class="case-item">
-                    <div class="case-image">
-                        <img src="https://digitalpro.liquid-themes.com/wp-content/uploads/2020/01/fancy6@2x-1.jpg" alt="Photo Retouching">
-                    </div>
-                    <div class="case-info">
-                        <h3>Photo Retouching</h3>
-                        <p>Branding</p>
-                    </div>
-                </div>
-                <div class="case-item">
-                    <div class="case-image">
-                        <img src="https://digitalpro.liquid-themes.com/wp-content/uploads/2020/08/box4@2x-1.jpg" alt="Kontrast">
-                    </div>
-                    <div class="case-info">
-                        <h3>Kontrast</h3>
-                        <p>Branding</p>
-                    </div>
-                </div>
-            </div>
-            <div class="case-navigation">
-                <button class="nav-arrow">←</button>
-                <button class="nav-arrow">→</button>
-            </div>
-        </div>
-    </section>
     <!-- Footer -->
     <footer class="footer" id="down">
         <div class="container">
@@ -401,7 +336,8 @@
                     <div class="footer-column">
                         <h4>RESUME</h4>
                         <ul>
-                            <li><a href="https://drive.google.com/file/d/1S11lfR5CVIYZ1l1umkYg4nHMz2ei0YaL/view?usp=drive_link">이력서
+                            <li><a
+                                    href="https://drive.google.com/file/d/1S11lfR5CVIYZ1l1umkYg4nHMz2ei0YaL/view?usp=drive_link">이력서
                                     다시보기</a></li>
                         </ul>
                     </div>

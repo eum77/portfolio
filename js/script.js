@@ -6,49 +6,48 @@ filterInit()
 3. 텍스트 클리핑 마스크 애니메이션
  textMaskAnimation()
  */
-filterInit()
-modalInit()
+filterInit();
+modalInit();
 closeModal();
 
+function filterInit() {
+  $(".fbtn").eq(0).addClass("active");
 
+  $(".fbtn").on("click", function () {
+    // 1. 클릭된 버튼의 data속성을 취득
+    const type = $(this).data("btn");
+    // 2. 모두 숨김
+    $(".item").hide();
+    $(".fbtn").removeClass('active');
+    // 3. 일치하면(조건부) 표시
 
-function filterInit(){
-    $('.fbtn').on('click',function(){
-        // 1. 클릭된 버튼의 data속성을 취득
-        // const type = $(this).attr('data-btn');
-        const type = $(this).data("btn");
-
-        // 2. 모두 숨김
-        $('.item').hide();
-
-        // 3. 일치하면(조건부) 표시
-
-        // 4. .item의 data속성과 비교 type
-        if(type === "all"){
-            $('.item').fadeIn();
-        } else {
-            $(`.item[data-item="${type}"]`).fadeIn();
-        }
-
-    })
-}
-function modalInit(){
-    $('.item[data-url]').on('click',function(){
-        const url = $(this).data('url');
-        if(url){
-            $('#modal').fadeIn(300);
-            $('#modal-body').load(url);
-            $('body').addClass('modal-open');
-        }
-    });
-}
-function closeModal(){
-    $('#modal').fadeOut();
-    $('body').removeClass('modal-open');
-}
-$('.close').on('click',closeModal);
-$(window).on('click', (e)=>{
-    if(e.target.id === "modal"){
-        closeModal();
+    // 4. .item의 data속성과 비교 type
+    if (type === "all") {
+      $(".item").fadeIn();
+      $('.fbtn').eq(0).addClass('active');
+    } else {
+      $(`.item[data-item="${type}"]`).fadeIn();
+      $(`.fbtn[data-btn="${type}"]`).addClass('active');
     }
-})
+  });
+}
+function modalInit() {
+  $(".item[data-url]").on("click", function () {
+    const url = $(this).data("url");
+    if (url) {
+      $("#modal").fadeIn(300);
+      $("#modal-body").load(url);
+      $("body").addClass("modal-open");
+    }
+  });
+}
+function closeModal() {
+  $("#modal").fadeOut();
+  $("body").removeClass("modal-open");
+}
+$(".close").on("click", closeModal);
+$(window).on("click", (e) => {
+  if (e.target.id === "modal") {
+    closeModal();
+  }
+});
