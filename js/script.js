@@ -1,19 +1,24 @@
-/* 
-1. 분류 별 필터링 기능 
+/*
+1. 분류 별 필터링 기능
 filterInit()
 2. 팝업 기능
  modalInit()
+3. 텍스트 클리핑 마스크 애니메이션
+ textMaskAnimation()
  */
 filterInit()
 modalInit()
 closeModal();
+
+
+
 function filterInit(){
     $('.fbtn').on('click',function(){
         // 1. 클릭된 버튼의 data속성을 취득
         // const type = $(this).attr('data-btn');
         const type = $(this).data("btn");
-        
-        // 2. 모두 숨김 
+
+        // 2. 모두 숨김
         $('.item').hide();
 
         // 3. 일치하면(조건부) 표시

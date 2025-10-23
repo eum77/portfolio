@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>음.. 나령</title>
-    <link href="https://cdn.jsdelivr.net/gh/leetaewook/gmarket-sans-dynamic-subset/GmarketSans.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@kfonts/nexon-lv1-gothic-low-otf@0.2.0/index.min.css" rel="stylesheet">
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+
+
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
@@ -42,7 +43,14 @@
     </header>
     <!-- Video box -->
     <div class="video_box">
-        <video src="./images/introduce.mp4" autoplay muted loop></video>
+        <div class="pr">
+            <div class="sticker">VLOG</div>
+            <div class="pt"></div>
+            <div class="msg"></div>
+        </div>
+        <div class="player">
+            <video src="./images/introduce.mp4" autoplay muted loop></video>
+        </div>
     </div>
     <!-- Hero Section -->
     <section class="hero">
@@ -51,25 +59,18 @@
                 <div class="hero-left">
                     <p class="hero-subtitle"></p>
                     <h1 class="hero-title">
-                        <span class="rotating-text">
-                            <span class="text-item active">Fill the Frame, <br><span>
-                                    <span class="text-item active">Feel the Story, <br></span>
-                                    <span class="text-item active">Full of Harmony</span>
-                                </span>
-                            </span>
+                        <span class="rotating-text df column">
+                            <span class="text-item active">Fill the Frame, </span>
+                            <span class="text-item">Feel the Story, </span>
+                            <span class="text-item">Full of Harmony</span>
                         </span>
                     </h1>
-                    <span class="hero-description"> '웃음의 타이밍을 아는' <br> 영상 디자이너 음나령 입니다. </span>
+                    <span class="hero-description df column"> <span>'웃음의 타이밍을 아는'</span><span>영상 디자이너 음나령 입니다. </span>
+                    </span>
                     <div class="hero-buttons">
-                        <a class="btn btn-primary" target="_blank"
-                            href=https://drive.google.com/file/d/1S11lfR5CVIYZ1l1umkYg4nHMz2ei0YaL/view?uspdrive_link>이력서
+                        <a class="btn btn-primary" target="_blank" href=https://drive.google.com/file/d/1S11lfR5CVIYZ1l1umkYg4nHMz2ei0YaL/view?uspdrive_link>이력서
                             보기</a>
-                        <a class="btn btn-secondary" target="_blank"
-                            href="https://github.com/eum77?tab=repositories">깃허브 가기</a>
-                    </div>
-                </div>
-                <div class="hero-right">
-                    <div class="hero-image">
+                        <a class="btn btn-secondary" target="_blank" href="https://github.com/eum77?tab=repositories">깃허브 가기</a>
                     </div>
                 </div>
             </div>
@@ -82,8 +83,7 @@
                 <div class="service-card">
                     <div class="service-icon">
                         <svg width="60" height="60" viewBox="0 0 60 60">
-                            <rect x="10" y="15" width="40" height="30" rx="3" fill="none" stroke="#ff6b6b"
-                                stroke-width="2" />
+                            <rect x="10" y="15" width="40" height="30" rx="3" fill="none" stroke="#ff6b6b" stroke-width="2" />
                             <circle cx="30" cy="30" r="8" fill="#ff6b6b" opacity="0.2" />
                         </svg>
                     </div>
@@ -105,8 +105,7 @@
                 <div class="service-card">
                     <div class="service-icon">
                         <svg width="60" height="60" viewBox="0 0 60 60">
-                            <polygon points="30,10 40,20 50,15 45,35 15,35 10,15 20,20" fill="none" stroke="#45b7d1"
-                                stroke-width="2" />
+                            <polygon points="30,10 40,20 50,15 45,35 15,35 10,15 20,20" fill="none" stroke="#45b7d1" stroke-width="2" />
                             <circle cx="30" cy="25" r="3" fill="#45b7d1" />
                         </svg>
                     </div>
@@ -149,7 +148,7 @@
                     <img src="./images/bottle.png" alt="bottle">
                 </div>
             </div>
-<!--             <div class="grid">
+            <!--             <div class="grid">
                 <div class="item" data-item="pro" data-url="./mo.html">
                     <img src="./images/sddefault.webp" alt="university">
                 </div>
@@ -169,7 +168,8 @@
                     <img src="./images/bottle.png" alt="bottle">
                 </div>
             </div>
- -->        </div>
+ -->
+        </div>
     </section>
     <!-- Modal -->
     <div id="modal" class="modal">
@@ -195,8 +195,7 @@
                                 가기 <span class="arrow">→</span></a>
                             <a href="https://frontend-omega-self.vercel.app/" target="_blank" class="btn-explore">사이트
                                 가기<span class="arrow">→</span></a>
-                            <a href="https://drive.google.com/file/d/12v6OIeeRwmhrYMaJRL67LKEiLih3a60C/view?usp=drive_link"
-                                target="_blank" class="btn-explore">기획서 보기<span class="arrow">→</span></a>
+                            <a href="https://drive.google.com/file/d/12v6OIeeRwmhrYMaJRL67LKEiLih3a60C/view?usp=drive_link" target="_blank" class="btn-explore">기획서 보기<span class="arrow">→</span></a>
                         </div>
                     </div>
                 </div>
@@ -244,8 +243,7 @@
                                 가기 <span class="arrow">→</span></a>
                             <a href="https://frontend-omega-self.vercel.app/" target="_blank" class="btn-explore">사이트
                                 가기<span class="arrow">→</span></a>
-                            <a href="https://drive.google.com/file/d/12v6OIeeRwmhrYMaJRL67LKEiLih3a60C/view?usp=drive_link"
-                                target="_blank" class="btn-explore">기획서 보기<span class="arrow">→</span></a>
+                            <a href="https://drive.google.com/file/d/12v6OIeeRwmhrYMaJRL67LKEiLih3a60C/view?usp=drive_link" target="_blank" class="btn-explore">기획서 보기<span class="arrow">→</span></a>
                         </div>
                     </div>
                 </div>
@@ -293,8 +291,7 @@
                                 가기 <span class="arrow">→</span></a>
                             <a href="https://frontend-omega-self.vercel.app/" target="_blank" class="btn-explore">사이트
                                 가기<span class="arrow">→</span></a>
-                            <a href="https://drive.google.com/file/d/12v6OIeeRwmhrYMaJRL67LKEiLih3a60C/view?usp=drive_link"
-                                target="_blank" class="btn-explore">기획서 보기<span class="arrow">→</span></a>
+                            <a href="https://drive.google.com/file/d/12v6OIeeRwmhrYMaJRL67LKEiLih3a60C/view?usp=drive_link" target="_blank" class="btn-explore">기획서 보기<span class="arrow">→</span></a>
                         </div>
                     </div>
                 </div>
@@ -336,8 +333,7 @@
             <div class="case-grid">
                 <div class="case-item">
                     <div class="case-image">
-                        <img src="https://digitalpro.liquid-themes.com/wp-content/uploads/2020/01/fancy1@2x-1.jpg"
-                            alt="Nexa Mobile">
+                        <img src="https://digitalpro.liquid-themes.com/wp-content/uploads/2020/01/fancy1@2x-1.jpg" alt="Nexa Mobile">
                     </div>
                     <div class="case-info">
                         <h3>Cafe In</h3>
@@ -346,8 +342,7 @@
                 </div>
                 <div class="case-item">
                     <div class="case-image">
-                        <img src="https://digitalpro.liquid-themes.com/wp-content/uploads/2020/01/fancy5@2x-1.jpg"
-                            alt="Aliens do 3D Automobile">
+                        <img src="https://digitalpro.liquid-themes.com/wp-content/uploads/2020/01/fancy5@2x-1.jpg" alt="Aliens do 3D Automobile">
                     </div>
                     <div class="case-info">
                         <h3>Aliens do 3D Automobile</h3>
@@ -356,8 +351,7 @@
                 </div>
                 <div class="case-item">
                     <div class="case-image">
-                        <img src="https://digitalpro.liquid-themes.com/wp-content/uploads/2020/01/fancy6@2x-1.jpg"
-                            alt="Photo Retouching">
+                        <img src="https://digitalpro.liquid-themes.com/wp-content/uploads/2020/01/fancy6@2x-1.jpg" alt="Photo Retouching">
                     </div>
                     <div class="case-info">
                         <h3>Photo Retouching</h3>
@@ -366,8 +360,7 @@
                 </div>
                 <div class="case-item">
                     <div class="case-image">
-                        <img src="https://digitalpro.liquid-themes.com/wp-content/uploads/2020/08/box4@2x-1.jpg"
-                            alt="Kontrast">
+                        <img src="https://digitalpro.liquid-themes.com/wp-content/uploads/2020/08/box4@2x-1.jpg" alt="Kontrast">
                     </div>
                     <div class="case-info">
                         <h3>Kontrast</h3>
@@ -408,8 +401,7 @@
                     <div class="footer-column">
                         <h4>RESUME</h4>
                         <ul>
-                            <li><a
-                                    href="https://drive.google.com/file/d/1S11lfR5CVIYZ1l1umkYg4nHMz2ei0YaL/view?usp=drive_link">이력서
+                            <li><a href="https://drive.google.com/file/d/1S11lfR5CVIYZ1l1umkYg4nHMz2ei0YaL/view?usp=drive_link">이력서
                                     다시보기</a></li>
                         </ul>
                     </div>
@@ -418,7 +410,7 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

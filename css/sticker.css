@@ -1,0 +1,32 @@
+.sticker {
+  color: #7d73ff;
+  position: absolute;
+  -webkit-text-stroke: 0.015em #333;
+  white-space: nowrap;
+  font-size: 3rem;
+  font-weight: 700;
+  z-index: 9999;
+  left: 40%;
+  top: -50px;
+}
+
+.sticker::before {
+  content: "VLOG";
+  z-index: -1;
+  color: #f2f2f2;
+  -webkit-text-stroke: 0.1em #f2f2f2;
+  position: absolute;
+  white-space: nowrap;
+  inset: 0;
+}
+
+.sticker::after {
+  content: "VLOG";
+  position: absolute;
+  z-index: -2;
+  color: #f2f2f2;
+  -webkit-text-stroke: 0.25em #0002;
+  inset: 0.005em 0 0 0.005em;
+  white-space: nowrap;
+  filter: blur(0.005em);
+}
