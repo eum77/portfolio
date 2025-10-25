@@ -551,6 +551,10 @@ p {
   color: #2c3e50;
 }
 
+.port-header p {
+  font-size: 1rem;
+  color: #2c3e50;
+}
 .fbtn.active {
   background-color: rgb(255, 107, 107);
   color: white;
